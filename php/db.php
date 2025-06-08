@@ -1,12 +1,18 @@
 <?php
-$host = 'localhost';
-$db   = 'swapnest';
+$host = 'maglev.proxy.rlwy.net';
+$db   = 'railway';
 $user = 'root';
-$pass = '';
+$pass = 'vtROrSCjaysMdWojGkUFnSTYNnlYBdkp';
+$port = 57175;
+
 try {
-    $pdo = new PDO("mysql:host=$host;dbname=$db;charset=utf8", $user, $pass);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $pdo = new PDO(
+        "mysql:host=$host;port=$port;dbname=$db;charset=utf8mb4",
+        $user,
+        $pass,
+        [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]
+    );
 } catch (PDOException $e) {
-    die("Database connection failed: " . $e->getMessage());
+    die("DB connection failed: " . $e->getMessage());
 }
 ?>
