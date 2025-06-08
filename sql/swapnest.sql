@@ -24,7 +24,7 @@ CREATE TABLE IF NOT EXISTS products (
   FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
 );
 
--- Orders table (optional for later)
+-- Orders table
 CREATE TABLE IF NOT EXISTS orders (
   id INT AUTO_INCREMENT PRIMARY KEY,
   user_id INT NOT NULL,
@@ -39,12 +39,3 @@ CREATE TABLE IF NOT EXISTS admins (
   password VARCHAR(255) NOT NULL,
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
-
-CREATE TABLE orders ( 
-  order_id INT PRIMARY KEY AUTO_INCREMENT, 
-  buyer_email VARCHAR(255), 
-  seller_email VARCHAR(255), 
-  product_id INT,
-   order_status VARCHAR(32), 
-   payment_status VARCHAR(32), 
-   order_date DATETIME, FOREIGN KEY (buyer
