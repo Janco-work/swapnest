@@ -12,7 +12,7 @@
     <nav class="navbar">
       <div class="brand">SwapNest</div>
       <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
+        <li><a href="index.php">Home</a></li>
         <li><a href="#" id="sellBtn">Sell</a></li>
         <li><a href="#" id="cartBtn">Cart <span id="cartCount"></span></a></li>
         <li><a href="#" id="loginBtn">Login</a></li>
