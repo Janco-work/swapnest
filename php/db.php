@@ -1,10 +1,10 @@
 <?php
-$host = 'maglev.proxy.rlwy.net';
+$host = 'mysql.railway.internal';
 $db   = 'railway';
 $user = 'root';
-$pass = 'vtROrSCjaysMdWojGkUFnSTYNnlYBdkp';
+$pass = 'VRSNRkQtHuDqNCCLrssqxTzgzbOsqQLy';
 
-$port = 57175; 
+$port = 3306; 
 $dsn = "mysql:host=$host;port=$port;dbname=$db;charset=utf8mb4";
 
 try {
