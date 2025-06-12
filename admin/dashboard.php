@@ -67,7 +67,7 @@ if (!isset($_SESSION['admin_logged_in']) || !$_SESSION['admin_logged_in']) {
   <nav class="navbar">
     <div class="brand">SwapNest <span style="color:#2d9cdb;font-weight:normal;font-size:1.1rem;">Admin</span></div>
     <ul class="nav-links">
-      <li><a href="../index.php">Home</a></li>
+      <li><a href="/index.php">Home</a></li>
       <li><a href="dashboard.php" class="active">Dashboard</a></li>
       <li><a href="logout.php" class="logout-btn">Logout</a></li>
     </ul>
