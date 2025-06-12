@@ -1,10 +1,10 @@
 <?php
-$host = 'mysql.railway.internal';
+$host = 'caboose.proxy.rlwy.net';
 $db   = 'railway';
 $user = 'root';
 $pass = 'VRSNRkQtHuDqNCCLrssqxTzgzbOsqQLy';
 
-$port = 3306; 
+$port = 44695; 
 $dsn = "mysql:host=$host;port=$port;dbname=$db;charset=utf8mb4";
 
 try {
