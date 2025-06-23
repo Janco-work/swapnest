@@ -144,6 +144,8 @@
           <input type="text" id="paymentExp" name="paymentExp" placeholder="MM/YY" required maxlength="5" />
           <label for="paymentCvv">CVV:</label>
           <input type="text" id="paymentCvv" name="paymentCvv" required maxlength="4" />
+          <label for="paymentAddress">Shipping Address:</label>
+          <input type="text" id="paymentAddress" name="paymentAddress" required />
           <button type="submit">Confirm Purchase</button>
         </form>
       </div>

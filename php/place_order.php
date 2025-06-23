@@ -21,7 +21,8 @@ foreach ($data['items'] as $item) {
     $stmt->execute([
         $data['buyer_email'],
         $item['email'] ?? '',
-        $item['id'] ?? 0, 
+        $item['id'] ?? 0,
+        $data['payment']['address'] ?? '',
         'pending',
         'paid'
     ]);
