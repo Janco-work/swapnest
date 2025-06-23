@@ -395,6 +395,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const cardNumber = document.getElementById("paymentCard").value.trim();
     const cardExp = document.getElementById("paymentExp").value.trim();
     const cardCvv = document.getElementById("paymentCvv").value.trim();
+    const address = document.getElementById("paymentAddress").value.trim();
 
     if (!/^MR\. |^MRS\. /i.test(cardName)) {
       showToast('Card name must start with "MR. " or "MRS. "', "info");
@@ -412,6 +413,10 @@ document.addEventListener("DOMContentLoaded", () => {
       showToast('CVV must be exactly 3 numbers.', "info");
       return false;
     }
+    if (!address) {
+      showToast('Please enter a shipping address.', "info");
+      return false;
+    }
     // ---- END VALIDATION ----
 
     const formData = {
@@ -421,7 +426,8 @@ document.addEventListener("DOMContentLoaded", () => {
         name: cardName,
         card: cardNumber,
         exp: cardExp,
-        cvv: cardCvv
+        cvv: cardCvv,
+        address: address
       }
     };
     try {
