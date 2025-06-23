@@ -16,7 +16,7 @@ if (!$data || !isset($data['buyer_email']) || !isset($data['items'])) {
 foreach ($data['items'] as $item) {
 
     // Insert each product as a separate order row
-    $stmt = $pdo->prepare("INSERT INTO orders (buyer_email, email, product_id, order_status, payment_status, order_date)
+    $stmt = $pdo->prepare("INSERT INTO orders (buyer_email, address, email, product_id, order_status, payment_status, order_date)
                            VALUES (?, ?, ?, ?, ?, NOW())");
     $stmt->execute([
         $data['buyer_email'],
